@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelOps | AIOps Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">🛡 SentinelOps</h2>
+            <p class="tagline">Privacy-First AIOps</p>
+
+            <nav>
+                <a href="#overview" class="active">▦ Overview</a>
+                <a href="#monitoring">◉ Monitoring</a>
+                <a href="#alerts">⚠ Alerts</a>
+                <a href="#telemetry">▤ Telemetry</a>
+                <a href="#privacy">🔒 Privacy</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <span class="status-dot"></span>
+                Backend connection
+                <strong id="connectionStatus">Checking...</strong>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>System Overview</h1>
+                    <p>Monitor infrastructure health and security</p>
+                </div>
+                <div class="topbar-right">
+                    <span>● Live Monitoring</span>
+                    <button id="refreshBtn">↻ Refresh</button>
+                </div>
+            </header>
+
+            <!-- Overview -->
+            <section id="overview">
+                <h2>Overview</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <p>Total Telemetry Records</p>
+                        <h2 id="totalRecords">0</h2>
+                        <small>Received by backend</small>
+                    </div>
+
+                    <div class="card">
+                        <p>Healthy Records</p>
+                        <h2 id="healthyRecords">0</h2>
+                        <small>Low risk</small>
+                    </div>
+
+                    <div class="card">
+                        <p>Active Anomalies</p>
+                        <h2 id="anomalyRecords">0</h2>
+                        <small>High and critical risk</small>
+                    </div>
+
+                    <div class="card">
+                        <p>Backend Status</p>
+                        <h2 id="backendStatus">Checking</h2>
+                        <small>Flask API connection</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Monitoring -->
+            <section id="monitoring">
+                <h2>Infrastructure Monitoring</h2>
+
+                <div class="cards">
+                    <div class="card metric-card">
+                        <p>CPU Usage</p>
+                        <h2 id="cpuValue">--</h2>
+                        <div class="progress">
+                            <div id="cpuBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="card metric-card">
+                        <p>RAM Usage</p>
+                        <h2 id="ramValue">--</h2>
+                        <div class="progress">
+                            <div id="ramBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="card metric-card">
+                        <p>Disk Usage</p>
+                        <h2 id="diskValue">--</h2>
+                        <div class="progress">
+                            <div id="diskBar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Alerts -->
+            <section id="alerts">
+                <h2>Anomaly Detection</h2>
+                <div class="card">
+                    <div id="alertsList">
+                        No telemetry analysis available yet.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Telemetry -->
+            <section id="telemetry">
+                <h2>Telemetry Records</h2>
+                <div class="card table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Host</th>
+                                <th>Metric</th>
+                                <th>Value</th>
+                                <th>Severity</th>
+                                <th>Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="telemetryTable">
+                            <tr>
+                                <td colspan="5">Waiting for backend data...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Privacy -->
+            <section id="privacy">
+                <h2>Privacy & Security</h2>
+                <div class="card privacy-card">
+                    <h3>🔒 Privacy-First Architecture</h3>
+                    <p>
+                        Raw telemetry is processed in the customer environment.
+                        The backend accepts only approved metadata fields.
+                    </p>
+                    <span class="privacy-label">
+                        Approved-field validation enabled
+                    </span>
+                </div>
+            </section>
+
+            <footer>
+                SentinelOps | Privacy-First AIOps Platform
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
