@@ -3,164 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SentinelOps | AIOps Dashboard</title>
+    <meta name="description" content="SentinelOps Privacy-First AIOps Observability Platform">
+    <title>SentinelOps | Overview</title>
+
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
 
-    <div class="app">
+<div class="layout">
 
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h2 class="logo">🛡 SentinelOps</h2>
-            <p class="tagline">Privacy-First AIOps</p>
+    <aside class="sidebar">
 
-            <nav>
-                <a href="#overview" class="active">▦ Overview</a>
-                <a href="#monitoring">◉ Monitoring</a>
-                <a href="#alerts">⚠ Alerts</a>
-                <a href="#telemetry">▤ Telemetry</a>
-                <a href="#privacy">🔒 Privacy</a>
-            </nav>
+        <a class="brand" href="index.html">
+            <span class="brand-mark">S</span>
+            <span>
+                <b>SentinelOps</b>
+                <small>AIOps Platform</small>
+            </span>
+        </a>
 
-            <div class="sidebar-bottom">
-                <span class="status-dot"></span>
-                Backend connection
-                <strong id="connectionStatus">Checking...</strong>
+        <p class="nav-label">WORKSPACE</p>
+
+        <nav>
+            <a class="nav-link active" href="index.html">
+                <i data-lucide="layout-dashboard"></i> Overview
+            </a>
+
+            <a class="nav-link" href="pages/infrastructure.html">
+                <i data-lucide="activity"></i> Infrastructure
+            </a>
+
+            <a class="nav-link" href="pages/anomalies.html">
+                <i data-lucide="brain-circuit"></i> AI Anomalies
+            </a>
+
+            <a class="nav-link" href="pages/incidents.html">
+                <i data-lucide="alert-triangle"></i> Incidents
+            </a>
+
+            <a class="nav-link" href="pages/root-cause.html">
+                <i data-lucide="search"></i> Root Cause Analysis
+            </a>
+
+            <a class="nav-link" href="pages/recommendations.html">
+                <i data-lucide="lightbulb"></i> Recommendations
+            </a>
+
+            <a class="nav-link" href="pages/telemetry.html">
+                <i data-lucide="database"></i> Telemetry Explorer
+            </a>
+
+            <a class="nav-link" href="pages/collectors.html">
+                <i data-lucide="server"></i> Collectors
+            </a>
+
+            <a class="nav-link" href="pages/security.html">
+                <i data-lucide="shield-check"></i> Security & Privacy
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a class="nav-link" href="pages/settings.html">
+                <i data-lucide="settings"></i> Settings
+            </a>
+
+            <div class="profile">
+                <span class="avatar">SA</span>
+                <span>
+                    <b>System Admin</b>
+                    <small>Administrator</small>
+                </span>
             </div>
-        </aside>
 
-        <!-- Main content -->
-        <main class="main-content">
+        </div>
 
-            <header class="topbar">
-                <div>
-                    <h1>System Overview</h1>
-                    <p>Monitor infrastructure health and security</p>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div>
+                <p class="eyebrow">WORKSPACE / OVERVIEW</p>
+                <h1>Overview Dashboard</h1>
+            </div>
+
+            <div class="top-actions">
+                <span class="live-pill">
+                    <i></i> Demo Mode
+                </span>
+
+                <button class="icon-button" aria-label="Notifications">
+                    <i data-lucide="bell"></i>
+                </button>
+            </div>
+
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Infrastructure Overview</h2>
+                <p>Monitor infrastructure health and AI-powered insights.</p>
+            </div>
+
+            <span class="date-chip">PRIVACY-FIRST MONITORING</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="stat-head">
+                    <span>Monitored Servers</span>
+                    <i data-lucide="server"></i>
                 </div>
-                <div class="topbar-right">
-                    <span>● Live Monitoring</span>
-                    <button id="refreshBtn">↻ Refresh</button>
+                <strong>24</strong>
+                <small>Illustrative demo value</small>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-head">
+                    <span>Healthy Servers</span>
+                    <i data-lucide="check-circle"></i>
                 </div>
-            </header>
+                <strong>21</strong>
+                <small class="good">Normal status</small>
+            </article>
 
-            <!-- Overview -->
-            <section id="overview">
-                <h2>Overview</h2>
-
-                <div class="cards">
-                    <div class="card">
-                        <p>Total Telemetry Records</p>
-                        <h2 id="totalRecords">0</h2>
-                        <small>Received by backend</small>
-                    </div>
-
-                    <div class="card">
-                        <p>Healthy Records</p>
-                        <h2 id="healthyRecords">0</h2>
-                        <small>Low risk</small>
-                    </div>
-
-                    <div class="card">
-                        <p>Active Anomalies</p>
-                        <h2 id="anomalyRecords">0</h2>
-                        <small>High and critical risk</small>
-                    </div>
-
-                    <div class="card">
-                        <p>Backend Status</p>
-                        <h2 id="backendStatus">Checking</h2>
-                        <small>Flask API connection</small>
-                    </div>
+            <article class="stat-card">
+                <div class="stat-head">
+                    <span>Active Incidents</span>
+                    <i data-lucide="alert-circle"></i>
                 </div>
-            </section>
+                <strong>03</strong>
+                <small class="warn">Requires attention</small>
+            </article>
 
-            <!-- Monitoring -->
-            <section id="monitoring">
-                <h2>Infrastructure Monitoring</h2>
-
-                <div class="cards">
-                    <div class="card metric-card">
-                        <p>CPU Usage</p>
-                        <h2 id="cpuValue">--</h2>
-                        <div class="progress">
-                            <div id="cpuBar"></div>
-                        </div>
-                    </div>
-
-                    <div class="card metric-card">
-                        <p>RAM Usage</p>
-                        <h2 id="ramValue">--</h2>
-                        <div class="progress">
-                            <div id="ramBar"></div>
-                        </div>
-                    </div>
-
-                    <div class="card metric-card">
-                        <p>Disk Usage</p>
-                        <h2 id="diskValue">--</h2>
-                        <div class="progress">
-                            <div id="diskBar"></div>
-                        </div>
-                    </div>
+            <article class="stat-card">
+                <div class="stat-head">
+                    <span>Critical Alerts</span>
+                    <i data-lucide="shield-alert"></i>
                 </div>
-            </section>
+                <strong>01</strong>
+                <small class="bad">Critical severity</small>
+            </article>
 
-            <!-- Alerts -->
-            <section id="alerts">
-                <h2>Anomaly Detection</h2>
-                <div class="card">
-                    <div id="alertsList">
-                        No telemetry analysis available yet.
+        </section>
+
+        <section class="metric-grid">
+
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <h3>CPU Utilization</h3>
+                        <p>Average processor usage</p>
                     </div>
+                    <b>68%</b>
                 </div>
-            </section>
-
-            <!-- Telemetry -->
-            <section id="telemetry">
-                <h2>Telemetry Records</h2>
-                <div class="card table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Host</th>
-                                <th>Metric</th>
-                                <th>Value</th>
-                                <th>Severity</th>
-                                <th>Risk</th>
-                            </tr>
-                        </thead>
-                        <tbody id="telemetryTable">
-                            <tr>
-                                <td colspan="5">Waiting for backend data...</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="progress">
+                    <span style="width:68%"></span>
                 </div>
-            </section>
+                <small>Illustrative demo data</small>
+            </article>
 
-            <!-- Privacy -->
-            <section id="privacy">
-                <h2>Privacy & Security</h2>
-                <div class="card privacy-card">
-                    <h3>🔒 Privacy-First Architecture</h3>
-                    <p>
-                        Raw telemetry is processed in the customer environment.
-                        The backend accepts only approved metadata fields.
-                    </p>
-                    <span class="privacy-label">
-                        Approved-field validation enabled
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <h3>Memory Usage</h3>
+                        <p>System memory utilization</p>
+                    </div>
+                    <b>54%</b>
+                </div>
+                <div class="progress cyan">
+                    <span style="width:54%"></span>
+                </div>
+                <small>Illustrative demo data</small>
+            </article>
+
+            <article class="panel">
+                <div class="panel-head">
+                    <div>
+                        <h3>Disk Usage</h3>
+                        <p>Storage utilization</p>
+                    </div>
+                    <b>72%</b>
+                </div>
+                <div class="progress purple">
+                    <span style="width:72%"></span>
+                </div>
+                <small>Illustrative demo data</small>
+            </article>
+
+        </section>
+
+        <section class="two-col">
+
+            <article class="panel">
+                <div class="section-head">
+                    <div>
+                        <h3>Infrastructure Health</h3>
+                        <p>Resource utilization overview</p>
+                    </div>
+                    <span class="tag">DEMO DATA</span>
+                </div>
+
+                <div class="chart-placeholder">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <b>Telemetry Chart</b>
+                    <span>Live telemetry integration will be added next.</span>
+                </div>
+            </article>
+
+            <article class="panel">
+                <div class="section-head">
+                    <div>
+                        <h3>AI System Status</h3>
+                        <p>Intelligence engine</p>
+                    </div>
+                    <span class="status">READY</span>
+                </div>
+
+                <div class="ai-box">
+                    <span class="ai-symbol">
+                        <i data-lucide="brain-circuit"></i>
                     </span>
+                    <div>
+                        <b>AI Engine</b>
+                        <small>Integration pending</small>
+                    </div>
                 </div>
-            </section>
 
-            <footer>
-                SentinelOps | Privacy-First AIOps Platform
-            </footer>
+                <div class="detail-row">
+                    <span>Anomaly Detection</span>
+                    <b>Configured</b>
+                </div>
 
-        </main>
-    </div>
+                <div class="detail-row">
+                    <span>Root Cause Analysis</span>
+                    <b>Configured</b>
+                </div>
 
-    <script src="script.js"></script>
+                <div class="detail-row">
+                    <span>Recommendations</span>
+                    <b>Configured</b>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="panel table-panel">
+
+            <div class="section-head">
+                <div>
+                    <h3>Recent Incidents</h3>
+                    <p>Illustrative sample events, not live records</p>
+                </div>
+
+                <a class="text-link" href="pages/incidents.html">
+                    View all →
+                </a>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>INCIDENT</th>
+                            <th>SERVICE</th>
+                            <th>DESCRIPTION</th>
+                            <th>SEVERITY</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>#INC-001</td>
+                            <td>Web Server</td>
+                            <td>High CPU utilization</td>
+                            <td><span class="severity critical">Critical</span></td>
+                            <td>Open</td>
+                        </tr>
+
+                        <tr>
+                            <td>#INC-002</td>
+                            <td>Database</td>
+                            <td>High memory usage</td>
+                            <td><span class="severity high">High</span></td>
+                            <td>Investigating</td>
+                        </tr>
+
+                        <tr>
+                            <td>#INC-003</td>
+                            <td>Network</td>
+                            <td>Increased network latency</td>
+                            <td><span class="severity medium">Medium</span></td>
+                            <td>Monitoring</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <footer>
+            SentinelOps · Privacy-First AIOps Observability Platform
+            <span>Frontend Demo</span>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+
 </body>
 </html>

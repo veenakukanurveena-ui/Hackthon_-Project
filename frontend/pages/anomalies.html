@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Anomalies | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link active">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link">◉ Collectors</a>
+            <a href="security.html" class="nav-link">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">AI ENGINE / ANOMALY DETECTION</p>
+                <h1>AI Anomalies</h1>
+            </div>
+            <span class="live-pill"><i></i> AI ENGINE</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Anomaly Detection Center</h2>
+                <p>Identify unusual infrastructure and network behavior.</p>
+            </div>
+            <span class="date-chip">DEMO DATA</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-head">Total Anomalies</div>
+                <strong>18</strong>
+                <small>Illustrative detections</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Critical</div>
+                <strong class="bad">3</strong>
+                <small>High-risk observations</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">High Severity</div>
+                <strong class="warn">6</strong>
+                <small>Needs investigation</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Normal</div>
+                <strong class="good">9</strong>
+                <small>No unusual behavior</small>
+            </div>
+
+        </section>
+
+        <section class="panel table-panel">
+            <div class="section-head">
+                <div>
+                    <h2>Detected Anomalies</h2>
+                    <p>Sample AI detection results for demonstration.</p>
+                </div>
+                <span class="tag">AI ANALYSIS</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>RESOURCE</th>
+                            <th>METRIC</th>
+                            <th>OBSERVED VALUE</th>
+                            <th>SEVERITY</th>
+                            <th>DETECTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Server-03</td>
+                            <td>CPU Usage</td>
+                            <td>98%</td>
+                            <td><span class="severity critical">CRITICAL</span></td>
+                            <td>Isolation Forest</td>
+                        </tr>
+                        <tr>
+                            <td>Server-08</td>
+                            <td>Memory Usage</td>
+                            <td>94%</td>
+                            <td><span class="severity high">HIGH</span></td>
+                            <td>AI Detection</td>
+                        </tr>
+                        <tr>
+                            <td>Network-02</td>
+                            <td>Packet Loss</td>
+                            <td>18%</td>
+                            <td><span class="severity critical">CRITICAL</span></td>
+                            <td>AI Detection</td>
+                        </tr>
+                        <tr>
+                            <td>Server-12</td>
+                            <td>Latency</td>
+                            <td>280 ms</td>
+                            <td><span class="severity high">HIGH</span></td>
+                            <td>AI Detection</td>
+                        </tr>
+                        <tr>
+                            <td>Server-05</td>
+                            <td>Disk Usage</td>
+                            <td>97%</td>
+                            <td><span class="severity critical">CRITICAL</span></td>
+                            <td>AI Detection</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>How AI Detection Works</h2>
+            <p style="margin-top:10px;line-height:1.8;">
+                SentinelOps analyzes approved telemetry metadata using
+                feature engineering and anomaly detection models.
+                Unusual patterns are assigned severity levels to help
+                operators prioritize investigation.
+            </p>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

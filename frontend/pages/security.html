@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Privacy | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link">◉ Collectors</a>
+            <a href="security.html" class="nav-link active">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">PLATFORM / SECURITY</p>
+                <h1>Security & Privacy</h1>
+            </div>
+            <span class="live-pill"><i></i> PRIVACY FIRST</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Privacy Protection Center</h2>
+                <p>Understand how SentinelOps protects customer telemetry.</p>
+            </div>
+            <span class="date-chip">POLICY OVERVIEW</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-head">Raw Data Storage</div>
+                <strong class="good">Local</strong>
+                <small>Remains in customer environment</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Metadata Filtering</div>
+                <strong class="good">Enabled*</strong>
+                <small>*Design requirement</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Secure Transport</div>
+                <strong>TLS</strong>
+                <small>HTTPS communication design</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Data Exposure</div>
+                <strong class="good">Reduced</strong>
+                <small>Only approved fields are shared</small>
+            </div>
+
+        </section>
+
+        <section class="panel table-panel">
+            <div class="section-head">
+                <div>
+                    <h2>Data Privacy Policy</h2>
+                    <p>Example allow-list and restricted data categories.</p>
+                </div>
+                <span class="tag">DATA CONTROL</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DATA FIELD</th>
+                            <th>EXAMPLE</th>
+                            <th>POLICY</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>CPU Usage</td>
+                            <td>68%</td>
+                            <td class="good">Allowed metadata</td>
+                        </tr>
+
+                        <tr>
+                            <td>Memory Usage</td>
+                            <td>74%</td>
+                            <td class="good">Allowed metadata</td>
+                        </tr>
+
+                        <tr>
+                            <td>Network Latency</td>
+                            <td>42 ms</td>
+                            <td class="good">Allowed metadata</td>
+                        </tr>
+
+                        <tr>
+                            <td>Passwords</td>
+                            <td>Credentials</td>
+                            <td class="bad">Never transmit</td>
+                        </tr>
+
+                        <tr>
+                            <td>Access Tokens</td>
+                            <td>Authentication secrets</td>
+                            <td class="bad">Never transmit</td>
+                        </tr>
+
+                        <tr>
+                            <td>Raw Log Contents</td>
+                            <td>Unfiltered log text</td>
+                            <td class="bad">Remain local</td>
+                        </tr>
+
+                        <tr>
+                            <td>Personal Emails</td>
+                            <td>Email addresses</td>
+                            <td class="bad">Redact / exclude</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Security Architecture</h2>
+
+            <div class="detail-row">
+                <span>01 — Local data processing</span>
+                <b>Customer environment</b>
+            </div>
+
+            <div class="detail-row">
+                <span>02 — Privacy filtering</span>
+                <b>Allow-list and redaction</b>
+            </div>
+
+            <div class="detail-row">
+                <span>03 — Secure transmission</span>
+                <b>HTTPS / TLS</b>
+            </div>
+
+            <div class="detail-row">
+                <span>04 — Tenant isolation</span>
+                <b>Authenticated identity</b>
+            </div>
+
+            <div class="detail-row">
+                <span>05 — Access management</span>
+                <b>Role-based access design</b>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Our Privacy Principle</h2>
+            <p style="line-height:1.9;margin-top:10px;">
+                Raw customer telemetry should stay within the customer's
+                environment. SentinelOps receives only approved metadata
+                needed for monitoring, anomaly detection and operational
+                insights. Sensitive information must be filtered locally
+                before transmission.
+            </p>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

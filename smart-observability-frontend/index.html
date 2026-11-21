@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SentinelOps | Cyberpunk Command Center</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i data-lucide="shield-check"></i>
+            </div>
+
+            <div>
+                <h2>SentinelOps</h2>
+                <span>Command Center</span>
+            </div>
+        </div>
+
+        <div class="workspace">
+            <span class="workspace-label">WORKSPACE</span>
+            <div class="workspace-name">
+                <i data-lucide="layers"></i>
+                Production Environment
+            </div>
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="server"></i>
+                <span>Infrastructure</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="network"></i>
+                <span>Service Map</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="activity"></i>
+                <span>Live Telemetry</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="brain-circuit"></i>
+                <span>AI Intelligence</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="bell-ring"></i>
+                <span>Incidents</span>
+                <span class="nav-count">4</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="git-branch"></i>
+                <span>Root Cause</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="sparkles"></i>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="shield"></i>
+                <span>Security & Privacy</span>
+            </a>
+
+            <a href="#">
+                <i data-lucide="settings"></i>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-status">
+            <span class="status-heading">SYSTEM STATUS</span>
+
+            <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                All Systems Operational
+            </div>
+        </div>
+
+        <div class="operator-card">
+            <div class="operator-avatar">
+                <i data-lucide="user-round"></i>
+            </div>
+
+            <div class="operator-info">
+                <strong>System Operator</strong>
+                <span>Administrator</span>
+            </div>
+
+            <i data-lucide="chevron-down"></i>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="mobile-menu" id="menuToggle">
+                <i data-lucide="menu"></i>
+            </button>
+
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input
+                    type="text"
+                    id="dashboardSearch"
+                    placeholder="Search services, metrics, incidents..."
+                >
+                <span class="shortcut">Ctrl + K</span>
+            </div>
+
+            <div class="topbar-actions">
+
+                <div class="live-status">
+                    <span class="pulse-dot"></span>
+                    LIVE
+                </div>
+
+                <button class="icon-button" id="notificationButton">
+                    <i data-lucide="bell"></i>
+                    <span class="notification-count">4</span>
+                </button>
+
+                <button class="profile-button">
+                    <i data-lucide="user-round"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    <i data-lucide="sparkles"></i>
+                    INTELLIGENT OBSERVABILITY PLATFORM
+                </span>
+
+                <h1>
+                    Welcome to
+                    <span class="gradient-text">SentinelOps</span>
+                </h1>
+
+                <p>
+                    Monitor. Analyze. Predict. Protect.
+                    <br>
+                    Your infrastructure intelligence starts here.
+                </p>
+
+                <div class="hero-actions">
+                    <button id="exploreAIButton">
+                        Explore AI Insights
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+
+                    <span class="hero-subtext">
+                        <span class="pulse-dot"></span>
+                        Monitoring environment
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+                <div class="hero-globe">
+                    <i data-lucide="globe-2"></i>
+                    <div class="globe-lock">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                </div>
+
+                <div class="floating-node node-one">
+                    <i data-lucide="cloud"></i>
+                </div>
+
+                <div class="floating-node node-two">
+                    <i data-lucide="database"></i>
+                </div>
+
+                <div class="floating-node node-three">
+                    <i data-lucide="activity"></i>
+                </div>
+
+            </div>
+
+            <div class="hero-side-card">
+                <i data-lucide="brain-circuit"></i>
+                <h3>AI-Powered</h3>
+                <h3>Observability</h3>
+                <p>Smarter decisions.</p>
+                <p>A more reliable tomorrow.</p>
+                <div class="hero-card-line"></div>
+            </div>
+
+        </section>
+
+
+        <!-- KPI CARDS -->
+        <section class="kpi-grid">
+
+            <div class="kpi-card kpi-cyan">
+                <div class="kpi-top">
+                    <div class="kpi-icon">
+                        <i data-lucide="server"></i>
+                    </div>
+
+                    <span class="kpi-trend positive">
+                        <i data-lucide="trending-up"></i>
+                        +2.4%
+                    </span>
+                </div>
+
+                <p>Active Nodes</p>
+                <h2>24 <span>/ 26</span></h2>
+                <div class="mini-chart">
+                    <svg viewBox="0 0 300 50" preserveAspectRatio="none">
+                        <path d="M0 38 C20 20 30 45 50 32 S80 15 100 30 S130 40 150 20 S180 35 200 18 S230 25 250 12 S280 25 300 8"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="kpi-card kpi-purple">
+                <div class="kpi-top">
+                    <div class="kpi-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+
+                    <span class="kpi-trend positive">
+                        <i data-lucide="trending-up"></i>
+                        +1.2%
+                    </span>
+                </div>
+
+                <p>CPU Utilization</p>
+                <h2>64.8%</h2>
+
+                <div class="mini-chart">
+                    <svg viewBox="0 0 300 50" preserveAspectRatio="none">
+                        <path d="M0 30 C30 15 40 40 60 25 S90 35 110 18 S150 40 170 15 S210 32 230 12 S270 35 300 8"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="kpi-card kpi-green">
+                <div class="kpi-top">
+                    <div class="kpi-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+
+                    <span class="kpi-trend positive">
+                        <i data-lucide="trending-up"></i>
+                        +0.8%
+                    </span>
+                </div>
+
+                <p>Memory Usage</p>
+                <h2>72.3%</h2>
+
+                <div class="mini-chart">
+                    <svg viewBox="0 0 300 50" preserveAspectRatio="none">
+                        <path d="M0 32 C20 25 40 38 60 20 S90 28 110 25 S140 15 160 30 S190 15 210 22 S260 10 300 12"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="kpi-card kpi-orange">
+                <div class="kpi-top">
+                    <div class="kpi-icon">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+
+                    <span class="kpi-trend negative">
+                        <i data-lucide="trending-up"></i>
+                        +1
+                    </span>
+                </div>
+
+                <p>Open Incidents</p>
+                <h2>04</h2>
+
+                <div class="mini-chart">
+                    <svg viewBox="0 0 300 50" preserveAspectRatio="none">
+                        <path d="M0 38 C20 32 40 42 60 28 S90 35 110 22 S140 40 160 25 S190 30 210 15 S260 30 300 5"/>
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PERFORMANCE + AI -->
+        <section class="dashboard-grid">
+
+            <div class="chart-container performance-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-icon cyan-icon">
+                            <i data-lucide="chart-no-axes-combined"></i>
+                        </span>
+                        <h2>Infrastructure Performance</h2>
+                    </div>
+
+                    <span class="time-filter">Last 24 Hours</span>
+                </div>
+
+                <div class="chart-legend">
+                    <span><i class="legend-dot purple-dot"></i> CPU Usage</span>
+                    <span><i class="legend-dot cyan-dot"></i> Memory Usage</span>
+                </div>
+
+                <div class="chart-area">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+
+            </div>
+
+
+            <div class="ai-card">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-icon purple-icon">
+                            <i data-lucide="brain-circuit"></i>
+                        </span>
+                        <h2>AI Intelligence</h2>
+                    </div>
+
+                    <span class="ai-live">● ACTIVE</span>
+                </div>
+
+                <div class="ai-content">
+
+                    <div class="ai-score">
+                        <div class="score-circle">
+                            <strong>96%</strong>
+                            <span>AI Confidence</span>
+                        </div>
+                    </div>
+
+                    <div class="ai-insights">
+                        <div>
+                            <i data-lucide="check-circle"></i>
+                            <span>
+                                <strong>Anomaly Detection</strong>
+                                <small>Active</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="check-circle"></i>
+                            <span>
+                                <strong>Predictive Analysis</strong>
+                                <small>Ready</small>
+                            </span>
+                        </div>
+
+                        <div>
+                            <i data-lucide="check-circle"></i>
+                            <span>
+                                <strong>Smart Recommendations</strong>
+                                <small>Available</small>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="ai-action" id="exploreAIButton2">
+                    View AI Insights
+                    <i data-lucide="arrow-right"></i>
+                </button>
+
+                <div class="ai-decoration"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOWER PANELS -->
+        <section class="lower-grid">
+
+            <!-- GLOBAL SERVICE HEALTH -->
+            <div class="dashboard-section global-health">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-icon cyan-icon">
+                            <i data-lucide="globe"></i>
+                        </span>
+                        <h2>Global Service Health</h2>
+                    </div>
+                </div>
+
+                <div class="global-health-content">
+
+                    <div class="world-visual">
+                        <i data-lucide="globe-2"></i>
+                        <span class="world-point point-a"></span>
+                        <span class="world-point point-b"></span>
+                        <span class="world-point point-c"></span>
+                    </div>
+
+                    <div class="uptime">
+                        <div class="uptime-circle">
+                            <strong>99.8%</strong>
+                        </div>
+                        <span>Global Uptime</span>
+                    </div>
+
+                </div>
+
+                <div class="health-legend">
+                    <span><i class="legend-dot green-dot"></i> Healthy</span>
+                    <span><i class="legend-dot yellow-dot"></i> Warning</span>
+                    <span><i class="legend-dot red-dot"></i> Critical</span>
+                </div>
+
+            </div>
+
+
+            <!-- RECENT INCIDENTS -->
+            <div class="dashboard-section incident-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-icon red-icon">
+                            <i data-lucide="alert-triangle"></i>
+                        </span>
+                        <h2>Recent Incidents</h2>
+                    </div>
+
+                    <a href="#">View All →</a>
+                </div>
+
+                <div class="incident-list">
+
+                    <div class="incident-row">
+                        <span class="incident-indicator high">
+                            <i data-lucide="alert-circle"></i>
+                        </span>
+
+                        <span class="severity high-label">HIGH</span>
+
+                        <strong>Elevated CPU Utilization</strong>
+                        <time>2m ago</time>
+                    </div>
+
+                    <div class="incident-row">
+                        <span class="incident-indicator medium">
+                            <i data-lucide="alert-circle"></i>
+                        </span>
+
+                        <span class="severity medium-label">MEDIUM</span>
+
+                        <strong>Memory Threshold Warning</strong>
+                        <time>5m ago</time>
+                    </div>
+
+                    <div class="incident-row">
+                        <span class="incident-indicator info">
+                            <i data-lucide="info"></i>
+                        </span>
+
+                        <span class="severity info-label">INFO</span>
+
+                        <strong>Network Latency Variation</strong>
+                        <time>8m ago</time>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+            <div class="dashboard-section quick-actions">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="panel-icon orange-icon">
+                            <i data-lucide="zap"></i>
+                        </span>
+                        <h2>Quick Actions</h2>
+                    </div>
+                </div>
+
+                <div class="quick-action-grid">
+
+                    <button id="refreshButton" class="quick-btn cyan-action">
+                        <i data-lucide="refresh-cw"></i>
+                        <span>Refresh Data</span>
+                    </button>
+
+                    <button id="runAnalysisButton" class="quick-btn purple-action">
+                        <i data-lucide="brain-circuit"></i>
+                        <span>Run AI Analysis</span>
+                    </button>
+
+                    <button id="reportsButton" class="quick-btn blue-action">
+                        <i data-lucide="chart-column"></i>
+                        <span>View Reports</span>
+                    </button>
+
+                    <button id="alertsButton" class="quick-btn orange-action">
+                        <i data-lucide="bell"></i>
+                        <span>Manage Alerts</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer">
+            <span>© 2026 SentinelOps Intelligence Platform</span>
+            <span>Smart Observability • Privacy-First Monitoring</span>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- SCRIPTS -->
+<script src="js/api.js"></script>
+<script src="js/charts.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemetry Explorer | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link active">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link">◉ Collectors</a>
+            <a href="security.html" class="nav-link">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">DATA / TELEMETRY EXPLORER</p>
+                <h1>Telemetry Explorer</h1>
+            </div>
+            <span class="live-pill"><i></i> DATA MONITORING</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Approved Telemetry Metadata</h2>
+                <p>Explore the operational metrics shared with SentinelOps.</p>
+            </div>
+            <span class="date-chip">DEMO DATA</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-head">Telemetry Records</div>
+                <strong id="telemetry-count">--</strong>
+                <small>Awaiting backend data</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">CPU Metric</div>
+                <strong>68%</strong>
+                <small>Sample value</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Memory Metric</div>
+                <strong>74%</strong>
+                <small>Sample value</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Network Latency</div>
+                <strong>42 ms</strong>
+                <small>Sample value</small>
+            </div>
+
+        </section>
+
+        <section class="panel table-panel">
+
+            <div class="section-head">
+                <div>
+                    <h2>Telemetry Data Fields</h2>
+                    <p>Example of metadata permitted by the privacy policy.</p>
+                </div>
+                <span class="tag">ALLOW-LIST</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FIELD</th>
+                            <th>EXAMPLE VALUE</th>
+                            <th>DATA TYPE</th>
+                            <th>POLICY</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>cpu_usage</td>
+                            <td>68</td>
+                            <td>Numeric</td>
+                            <td class="good">Allowed</td>
+                        </tr>
+
+                        <tr>
+                            <td>memory_usage</td>
+                            <td>74</td>
+                            <td>Numeric</td>
+                            <td class="good">Allowed</td>
+                        </tr>
+
+                        <tr>
+                            <td>disk_usage</td>
+                            <td>52</td>
+                            <td>Numeric</td>
+                            <td class="good">Allowed</td>
+                        </tr>
+
+                        <tr>
+                            <td>latency_ms</td>
+                            <td>42</td>
+                            <td>Numeric</td>
+                            <td class="good">Allowed</td>
+                        </tr>
+
+                        <tr>
+                            <td>packet_loss_pct</td>
+                            <td>1.2</td>
+                            <td>Numeric</td>
+                            <td class="good">Allowed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Privacy-Aware Data Flow</h2>
+
+            <div class="detail-row">
+                <span>01 — Local collection</span>
+                <b>Customer environment</b>
+            </div>
+
+            <div class="detail-row">
+                <span>02 — Filtering and redaction</span>
+                <b>Local privacy policy</b>
+            </div>
+
+            <div class="detail-row">
+                <span>03 — Metadata transmission</span>
+                <b>Approved fields only</b>
+            </div>
+
+            <div class="detail-row">
+                <span>04 — Central analytics</span>
+                <b>SentinelOps SaaS</b>
+            </div>
+
+            <p style="margin-top:15px;line-height:1.8;">
+                Raw logs and sensitive customer information should remain
+                in the customer environment. Only approved, privacy-filtered
+                metadata is sent to the central platform.
+            </p>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collectors | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link active">◉ Collectors</a>
+            <a href="security.html" class="nav-link">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">AGENT MANAGEMENT / COLLECTORS</p>
+                <h1>Collectors</h1>
+            </div>
+            <span class="live-pill"><i></i> FLEET MONITORING</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Collector Fleet Health</h2>
+                <p>Monitor local telemetry collectors and their reporting status.</p>
+            </div>
+            <span class="date-chip">DEMO DATA</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-head">Total Collectors</div>
+                <strong>24</strong>
+                <small>Registered agents</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Online</div>
+                <strong class="good">21</strong>
+                <small>Reporting normally</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Offline</div>
+                <strong class="bad">2</strong>
+                <small>Not reporting</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Warning</div>
+                <strong class="warn">1</strong>
+                <small>Requires attention</small>
+            </div>
+
+        </section>
+
+        <section class="panel table-panel">
+
+            <div class="section-head">
+                <div>
+                    <h2>Registered Collectors</h2>
+                    <p>Illustrative collector inventory.</p>
+                </div>
+                <span class="tag">FLEET STATUS</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>COLLECTOR ID</th>
+                            <th>ENVIRONMENT</th>
+                            <th>VERSION</th>
+                            <th>LAST HEARTBEAT</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>COL-001</td>
+                            <td>Production</td>
+                            <td>1.0.0</td>
+                            <td>1 min ago</td>
+                            <td><span class="severity medium">ONLINE</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>COL-002</td>
+                            <td>Development</td>
+                            <td>1.0.0</td>
+                            <td>2 min ago</td>
+                            <td><span class="severity medium">ONLINE</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>COL-003</td>
+                            <td>Production</td>
+                            <td>1.0.0</td>
+                            <td>15 min ago</td>
+                            <td><span class="severity high">WARNING</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>COL-004</td>
+                            <td>Testing</td>
+                            <td>1.0.0</td>
+                            <td>Unavailable</td>
+                            <td><span class="severity critical">OFFLINE</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Collector Responsibilities</h2>
+
+            <div class="detail-row">
+                <span>01 — Telemetry collection</span>
+                <b>Local environment</b>
+            </div>
+
+            <div class="detail-row">
+                <span>02 — Sensitive data filtering</span>
+                <b>Privacy enforcement</b>
+            </div>
+
+            <div class="detail-row">
+                <span>03 — Metadata transmission</span>
+                <b>Secure communication</b>
+            </div>
+
+            <div class="detail-row">
+                <span>04 — Health heartbeat</span>
+                <b>Fleet monitoring</b>
+            </div>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

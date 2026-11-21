@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root Cause Analysis | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link active">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link">◉ Collectors</a>
+            <a href="security.html" class="nav-link">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">AI ENGINE / DIAGNOSTICS</p>
+                <h1>Root Cause Analysis</h1>
+            </div>
+            <span class="live-pill"><i></i> AI ASSISTED</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Understand Why Incidents Happen</h2>
+                <p>Explore possible causes behind detected infrastructure anomalies.</p>
+            </div>
+            <span class="date-chip">DEMO ANALYSIS</span>
+        </section>
+
+        <section class="panel">
+            <div class="section-head">
+                <div>
+                    <h2>Incident Under Analysis</h2>
+                    <p>Illustrative example: Server-03</p>
+                </div>
+                <span class="severity critical">CRITICAL</span>
+            </div>
+
+            <div class="detail-row">
+                <span>Incident ID</span>
+                <b>INC-001</b>
+            </div>
+
+            <div class="detail-row">
+                <span>Resource</span>
+                <b>Server-03</b>
+            </div>
+
+            <div class="detail-row">
+                <span>CPU Utilization</span>
+                <b class="bad">98%</b>
+            </div>
+
+            <div class="detail-row">
+                <span>Memory Utilization</span>
+                <b class="warn">91%</b>
+            </div>
+
+            <div class="detail-row">
+                <span>Detection Method</span>
+                <b>AI Anomaly Detection</b>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Possible Root Causes</h2>
+            <p style="margin:8px 0 18px;">AI-assisted hypotheses based on the sample metrics.</p>
+
+            <div class="detail-row">
+                <span>01 — Resource overload</span>
+                <b class="bad">High likelihood</b>
+            </div>
+
+            <div class="detail-row">
+                <span>02 — Unexpected workload spike</span>
+                <b class="warn">Possible</b>
+            </div>
+
+            <div class="detail-row">
+                <span>03 — Memory pressure</span>
+                <b class="warn">Possible</b>
+            </div>
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>AI Explanation</h2>
+
+            <div class="ai-box">
+                <div class="ai-symbol">✧</div>
+                <div>
+                    <b>Root Cause Assistant</b>
+                    <small>Illustrative explanation</small>
+                </div>
+            </div>
+
+            <p style="line-height:1.9;">
+                Server-03 shows unusually high CPU utilization alongside
+                elevated memory usage. This combination may indicate
+                resource contention or a sudden workload increase.
+                Further investigation of approved process-level metrics
+                and recent workload changes is recommended.
+            </p>
+
+            <p style="margin-top:12px;line-height:1.8;">
+                This is an AI-assisted hypothesis, not a confirmed cause.
+                An operator should validate it before taking action.
+            </p>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

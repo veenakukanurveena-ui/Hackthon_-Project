@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SentinelOps Backend Test</title>
+</head>
+<body style="background:#080d20;color:white;font-family:Arial;padding:40px;">
+
+    <h1>SentinelOps Backend Connection Test</h1>
+
+    <button onclick="testBackend()" style="padding:15px 25px;cursor:pointer;">
+        TEST BACKEND CONNECTION
+    </button>
+
+    <h3 id="result">Waiting for test...</h3>
+
+    <script>
+        async function testBackend() {
+            const result = document.getElementById("result");
+            result.textContent = "Connecting...";
+
+            try {
+                const response = await fetch(
+                    "http://127.0.0.1:5000/api/health"
+                );
+
+                const data = await response.json();
+
+                result.textContent =
+                    "BACKEND CONNECTED! " + JSON.stringify(data);
+
+            } catch (error) {
+                result.textContent =
+                    "CONNECTION FAILED: " + error.message;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070918">
+
+    <title>Sign In | SentinelOps</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="login.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background-effects">
+        <div class="gradient-orb orb-one"></div>
+        <div class="gradient-orb orb-two"></div>
+        <div class="gradient-orb orb-three"></div>
+        <div class="cyber-grid"></div>
+        <div class="light-beam beam-one"></div>
+        <div class="light-beam beam-two"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Main Login Container -->
+    <main class="login-page">
+
+        <!-- Left Branding Section -->
+        <section class="brand-section">
+
+            <div class="brand-top">
+                <div class="brand-logo">
+                    <div class="logo-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+
+                    <div class="brand-name">
+                        <h2>SENTINELOPS<span>.</span></h2>
+                        <p>INTELLIGENT OPERATIONS PLATFORM</p>
+                    </div>
+                </div>
+
+                <div class="security-status">
+                    <span class="status-dot"></span>
+                    SYSTEM SECURE
+                </div>
+            </div>
+
+            <div class="brand-content">
+
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    NEXT GENERATION OBSERVABILITY
+                </div>
+
+                <h1>
+                    SEE EVERYTHING.
+                    <span>CONTROL</span>
+                    <span class="gradient-text">EVERYTHING.</span>
+                </h1>
+
+                <p class="brand-description">
+                    Experience intelligent infrastructure monitoring,
+                    advanced observability and proactive incident
+                    management in one unified platform.
+                </p>
+
+                <!-- Visual Core -->
+                <div class="visual-core">
+
+                    <div class="core-ring ring-outer"></div>
+                    <div class="core-ring ring-middle"></div>
+                    <div class="core-ring ring-inner"></div>
+
+                    <div class="core-center">
+                        <i data-lucide="activity"></i>
+                    </div>
+
+                    <div class="orbit-point point-one"></div>
+                    <div class="orbit-point point-two"></div>
+                    <div class="orbit-point point-three"></div>
+
+                    <div class="floating-data data-one">
+                        <i data-lucide="cpu"></i>
+                        <span>CPU MONITORING</span>
+                    </div>
+
+                    <div class="floating-data data-two">
+                        <i data-lucide="shield-check"></i>
+                        <span>SECURITY ACTIVE</span>
+                    </div>
+
+                    <div class="floating-data data-three">
+                        <i data-lucide="network"></i>
+                        <span>NETWORK INTELLIGENCE</span>
+                    </div>
+
+                </div>
+
+                <div class="brand-features">
+
+                    <div class="feature">
+                        <i data-lucide="activity"></i>
+                        <span>Real-time Monitoring</span>
+                    </div>
+
+                    <div class="feature">
+                        <i data-lucide="brain-circuit"></i>
+                        <span>Intelligent Analytics</span>
+                    </div>
+
+                    <div class="feature">
+                        <i data-lucide="lock"></i>
+                        <span>Privacy-first Security</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="brand-footer">
+                <span>© 2026 SENTINELOPS</span>
+                <span>ENGINEERED FOR INTELLIGENCE</span>
+            </div>
+
+        </section>
+
+
+        <!-- Right Login Section -->
+        <section class="login-section">
+
+            <div class="login-card">
+
+                <div class="card-decoration decoration-top"></div>
+                <div class="card-decoration decoration-bottom"></div>
+
+                <div class="login-card-header">
+
+                    <div class="welcome-label">
+                        <span class="welcome-icon">
+                            <i data-lucide="sparkles"></i>
+                        </span>
+                        WELCOME BACK
+                    </div>
+
+                    <h2>Sign in to your <span>workspace.</span></h2>
+
+                    <p>
+                        Enter your credentials to access your
+                        intelligent operations dashboard.
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="email">EMAIL ADDRESS</label>
+
+                        <div class="input-wrapper">
+                            <i data-lucide="mail"></i>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="name@company.com"
+                                autocomplete="username"
+                                required
+                            >
+
+                            <span class="input-indicator"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+                            <label for="password">PASSWORD</label>
+
+                            <a href="forgot-password.html">
+                                Forgot password?
+                            </a>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <i data-lucide="lock"></i>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password"
+                            >
+                                <i data-lucide="eye"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-options">
+
+                        <label class="remember-option">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="custom-checkbox"></span>
+                            Remember me
+                        </label>
+
+                        <span class="secure-label">
+                            <i data-lucide="shield-check"></i>
+                            Secure login
+                        </span>
+
+                    </div>
+
+
+                    <button type="submit" class="login-button">
+
+                        <span>ACCESS WORKSPACE</span>
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                        <div class="button-glow"></div>
+
+                    </button>
+
+                    <div class="login-message" id="loginMessage"></div>
+
+                </form>
+
+
+                <div class="login-divider">
+                    <span></span>
+                    <p>SECURE PLATFORM ACCESS</p>
+                    <span></span>
+                </div>
+
+
+                <div class="signup-prompt">
+                    New to SentinelOps?
+                    <a href="register.html">Create an account</a>
+                </div>
+
+
+                <div class="login-security">
+                    <i data-lucide="shield-check"></i>
+                    <span>
+                        Your connection is protected with
+                        secure authentication.
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="login-bottom">
+                <span>POWERED BY SENTINELOPS INTELLIGENCE</span>
+
+                <div>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>

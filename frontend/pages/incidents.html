@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents | SentinelOps</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <a href="../index.html" class="brand">
+            <span class="brand-mark">S</span>
+            <span><b>SentinelOps</b><small>AI Observability</small></span>
+        </a>
+
+        <p class="nav-label">MAIN MENU</p>
+
+        <nav>
+            <a href="../index.html" class="nav-link">◈ Overview</a>
+            <a href="infrastructure.html" class="nav-link">▣ Infrastructure</a>
+            <a href="anomalies.html" class="nav-link">⌁ AI Anomalies</a>
+            <a href="incidents.html" class="nav-link active">⚠ Incidents</a>
+            <a href="root-cause.html" class="nav-link">◎ Root Cause</a>
+            <a href="recommendations.html" class="nav-link">✧ Recommendations</a>
+            <a href="telemetry.html" class="nav-link">▤ Telemetry</a>
+            <a href="collectors.html" class="nav-link">◉ Collectors</a>
+            <a href="security.html" class="nav-link">♢ Security & Privacy</a>
+            <a href="settings.html" class="nav-link">⚙ Settings</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">OPERATIONS / INCIDENT MANAGEMENT</p>
+                <h1>Incidents</h1>
+            </div>
+            <span class="live-pill"><i></i> INCIDENT CENTER</span>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Incident Management</h2>
+                <p>Track and investigate infrastructure incidents.</p>
+            </div>
+            <span class="date-chip">DEMO DATA</span>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-head">Total Incidents</div>
+                <strong>12</strong>
+                <small>Sample incident records</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Open</div>
+                <strong class="bad">4</strong>
+                <small>Awaiting investigation</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Investigating</div>
+                <strong class="warn">3</strong>
+                <small>Under review</small>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-head">Resolved</div>
+                <strong class="good">5</strong>
+                <small>Closed incidents</small>
+            </div>
+
+        </section>
+
+        <section class="panel table-panel">
+
+            <div class="section-head">
+                <div>
+                    <h2>Incident Timeline</h2>
+                    <p>Illustrative operational events.</p>
+                </div>
+                <span class="tag">12 INCIDENTS</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>INCIDENT ID</th>
+                            <th>DESCRIPTION</th>
+                            <th>RESOURCE</th>
+                            <th>SEVERITY</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>INC-001</td>
+                            <td>CPU utilization exceeded threshold</td>
+                            <td>Server-03</td>
+                            <td><span class="severity critical">CRITICAL</span></td>
+                            <td class="bad">Open</td>
+                        </tr>
+
+                        <tr>
+                            <td>INC-002</td>
+                            <td>Unusual memory consumption</td>
+                            <td>Server-08</td>
+                            <td><span class="severity high">HIGH</span></td>
+                            <td class="warn">Investigating</td>
+                        </tr>
+
+                        <tr>
+                            <td>INC-003</td>
+                            <td>Network packet loss detected</td>
+                            <td>Network-02</td>
+                            <td><span class="severity critical">CRITICAL</span></td>
+                            <td class="bad">Open</td>
+                        </tr>
+
+                        <tr>
+                            <td>INC-004</td>
+                            <td>High network latency</td>
+                            <td>Network-05</td>
+                            <td><span class="severity high">HIGH</span></td>
+                            <td class="warn">Investigating</td>
+                        </tr>
+
+                        <tr>
+                            <td>INC-005</td>
+                            <td>Disk utilization warning</td>
+                            <td>Server-12</td>
+                            <td><span class="severity medium">MEDIUM</span></td>
+                            <td class="good">Resolved</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="panel" style="margin-top:15px;">
+            <h2>Incident Response Workflow</h2>
+
+            <div class="detail-row">
+                <span>01 — Detection</span>
+                <b>Identify unusual behavior</b>
+            </div>
+
+            <div class="detail-row">
+                <span>02 — Correlation</span>
+                <b>Group related anomalies</b>
+            </div>
+
+            <div class="detail-row">
+                <span>03 — Investigation</span>
+                <b>Analyze possible root causes</b>
+            </div>
+
+            <div class="detail-row">
+                <span>04 — Resolution</span>
+                <b>Operator reviews and resolves</b>
+            </div>
+        </section>
+
+        <footer>
+            <span>SentinelOps © 2026</span>
+            <span>Privacy-first observability platform</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
