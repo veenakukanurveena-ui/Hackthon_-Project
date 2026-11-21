@@ -1,0 +1,22 @@
+training_data = [
+    {"cpu_usage": 25, "memory_usage": 40, "disk_usage": 50, "latency_ms": 20, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 30, "memory_usage": 45, "disk_usage": 52, "latency_ms": 25, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 35, "memory_usage": 42, "disk_usage": 48, "latency_ms": 30, "packet_loss_pct": 0, "failed_login_count": 1},
+    {"cpu_usage": 40, "memory_usage": 50, "disk_usage": 55, "latency_ms": 35, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 28, "memory_usage": 38, "disk_usage": 49, "latency_ms": 22, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 32, "memory_usage": 44, "disk_usage": 51, "latency_ms": 28, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 45, "memory_usage": 55, "disk_usage": 58, "latency_ms": 40, "packet_loss_pct": 0.1, "failed_login_count": 1},
+    {"cpu_usage": 38, "memory_usage": 48, "disk_usage": 53, "latency_ms": 32, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 42, "memory_usage": 52, "disk_usage": 56, "latency_ms": 38, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 27, "memory_usage": 41, "disk_usage": 47, "latency_ms": 24, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 33, "memory_usage": 46, "disk_usage": 50, "latency_ms": 29, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 37, "memory_usage": 49, "disk_usage": 54, "latency_ms": 33, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 29, "memory_usage": 43, "disk_usage": 48, "latency_ms": 26, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 41, "memory_usage": 51, "disk_usage": 57, "latency_ms": 36, "packet_loss_pct": 0.1, "failed_login_count": 1},
+    {"cpu_usage": 34, "memory_usage": 47, "disk_usage": 52, "latency_ms": 31, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 39, "memory_usage": 50, "disk_usage": 55, "latency_ms": 34, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 31, "memory_usage": 44, "disk_usage": 49, "latency_ms": 27, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 36, "memory_usage": 48, "disk_usage": 53, "latency_ms": 32, "packet_loss_pct": 0, "failed_login_count": 0},
+    {"cpu_usage": 43, "memory_usage": 54, "disk_usage": 59, "latency_ms": 39, "packet_loss_pct": 0, "failed_login_count": 1},
+    {"cpu_usage": 26, "memory_usage": 39, "disk_usage": 46, "latency_ms": 21, "packet_loss_pct": 0, "failed_login_count": 0}
+]
