@@ -1,4 +1,5 @@
-name: Deploy SentinelOps Frontend
+name: Deploy SentinelOps Frontend Deployment
+
 
 on:
   push:
